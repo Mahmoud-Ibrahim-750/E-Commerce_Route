@@ -51,6 +51,12 @@ dependencies {
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
+    // Activity & Fragment Implementation
+    val activityVersion = "1.9.0"
+    val fragmentVersion = "1.7.0"
+    implementation("androidx.activity:activity-ktx:$activityVersion")
+    implementation("androidx.fragment:fragment-ktx:$fragmentVersion")
+
     // Lifecycle
     val lifecycleVersion = "2.7.0"
 
