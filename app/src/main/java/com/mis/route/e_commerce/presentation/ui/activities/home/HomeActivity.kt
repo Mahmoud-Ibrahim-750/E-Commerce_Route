@@ -1,7 +1,7 @@
-package com.mis.route.e_commerce.ui.activities.home
+package com.mis.route.e_commerce.presentation.ui.activities.home
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.mis.route.e_commerce.R
 
 class HomeActivity : AppCompatActivity() {

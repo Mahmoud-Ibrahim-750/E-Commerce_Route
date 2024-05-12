@@ -1,4 +1,4 @@
-package com.mis.route.e_commerce.ui.base
+package com.mis.route.e_commerce.presentation.ui.base
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

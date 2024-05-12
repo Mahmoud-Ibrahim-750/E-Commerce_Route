@@ -1,4 +1,4 @@
-package com.mis.route.e_commerce.ui.base
+package com.mis.route.e_commerce.presentation.ui.base
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
