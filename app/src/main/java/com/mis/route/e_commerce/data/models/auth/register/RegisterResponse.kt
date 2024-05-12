@@ -1,9 +1,9 @@
-package com.mis.route.e_commerce.data.models.auth.login
+package com.mis.route.e_commerce.data.models.auth.register
 
 import com.google.gson.annotations.SerializedName
 import com.mis.route.e_commerce.data.models.auth.User
 
-data class LoginResponse(
+data class RegisterResponse(
 
     @field:SerializedName("message")
     val message: String? = null,

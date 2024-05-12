@@ -1,4 +1,4 @@
-package com.mis.route.e_commerce.data.models.auth.login
+package com.mis.route.e_commerce.data.models.auth
 
 import com.google.gson.annotations.SerializedName
 

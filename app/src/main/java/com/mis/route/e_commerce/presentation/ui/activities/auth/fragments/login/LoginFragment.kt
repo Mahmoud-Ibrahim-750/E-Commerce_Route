@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.mis.route.e_commerce.R
 import com.mis.route.e_commerce.databinding.FragmentLoginBinding
 import com.mis.route.e_commerce.presentation.ui.activities.auth.fragments.login.contracts.LoginScreenEvent
@@ -33,12 +34,21 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>() {
                 )
             )
         }
+
+        binding.txtCreateAccount.setOnClickListener {
+            viewModel.invoke(LoginScreenEvent.NavigateToRegister)
+        }
     }
 
     private fun renderUiState(state: LoginScreenState) {
         when (state) {
             is LoginScreenState.NavigateToHome -> navigateToHomeScreen(state)
+            LoginScreenState.NavigateToRegister -> navigateToRegisterScreen()
         }
+    }
+
+    private fun navigateToRegisterScreen() {
+        findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
     }
 
     private fun navigateToHomeScreen(state: LoginScreenState.NavigateToHome) {
