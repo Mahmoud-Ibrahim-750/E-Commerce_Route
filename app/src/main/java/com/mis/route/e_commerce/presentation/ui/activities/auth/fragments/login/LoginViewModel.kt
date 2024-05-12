@@ -24,7 +24,12 @@ class LoginViewModel @Inject constructor(
     override fun invoke(event: LoginScreenEvent) {
         when (event) {
             is LoginScreenEvent.Login -> login(event.email, event.password)
+            LoginScreenEvent.NavigateToRegister -> navigateToRegisterScreen()
         }
+    }
+
+    private fun navigateToRegisterScreen() {
+        state.value = LoginScreenState.NavigateToRegister
     }
 
     private fun login(email: String, password: String) {
@@ -34,15 +39,14 @@ class LoginViewModel @Inject constructor(
             try {
                 val loginResponse = loginUseCase(email, password)
                 with(loginResponse) {
-                    if (user == null || token == null) Log.d(TAG, "login: null user & token")
+                    if (user == null || token == null) Log.e(TAG, "login: null user & token")
                     else {
-                        sharedPreferencesHelper.saveUserToken(loginResponse.token)
-                        state.value = LoginScreenState
-                            .NavigateToHome(loginResponse.user!!, loginResponse.token!!)
+                        sharedPreferencesHelper.saveUserToken(token)
+                        state.postValue(LoginScreenState.NavigateToHome(user, token))
                     }
                 }
             } catch (e: Exception) {
-                Log.d(TAG, "login: ${e.message}")
+                Log.e(TAG, "login: ${e.message}")
             }
         }
     }

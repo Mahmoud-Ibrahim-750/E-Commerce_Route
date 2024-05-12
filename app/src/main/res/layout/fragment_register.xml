@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue"
+        android:padding="16dp"
+        tools:context=".ui.activities.auth.fragments.login.LoginFragmentdsasadsaaadssaasd">
+
+        <ImageView
+            android:id="@+id/img_route_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/route_logo_description"
+            android:src="@drawable/img_route_logo_plain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_full_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/full_name_label"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_route_logo" />
+
+        <EditText
+            android:id="@+id/txt_input_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints="name"
+            android:background="@drawable/shape_rounded"
+            android:backgroundTint="@color/white"
+            android:hint="@string/txt_input_full_name_hint"
+            android:inputType="textPersonName"
+            android:padding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_full_name_label" />
+
+        <TextView
+            android:id="@+id/txt_mobile_num_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/mobile_number_label"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_input_full_name" />
+
+        <EditText
+            android:id="@+id/txt_input_mobile_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints="phone"
+            android:background="@drawable/shape_rounded"
+            android:backgroundTint="@color/white"
+            android:hint="@string/mobile_number_input_hint"
+            android:inputType="phone"
+            android:padding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_mobile_num_label" />
+
+        <TextView
+            android:id="@+id/txt_email_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/mail_address_hint"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_input_mobile_number" />
+
+        <EditText
+            android:id="@+id/txt_input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/shape_rounded"
+            android:backgroundTint="@color/white"
+            android:hint="@string/mail_edit_text_hint"
+            android:inputType="textEmailAddress"
+            android:padding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_email_label" />
+
+        <TextView
+            android:id="@+id/txt_password_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/password_label"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_input_email" />
+
+        <EditText
+            android:id="@+id/txt_input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/shape_rounded"
+            android:backgroundTint="@color/white"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_password_label" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/shape_rounded"
+            android:padding="14dp"
+            android:text="@string/sign_up_txt"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/txt_input_password" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
